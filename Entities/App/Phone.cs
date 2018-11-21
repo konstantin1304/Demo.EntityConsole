@@ -9,17 +9,17 @@ using System.Threading.Tasks;
 
 namespace Entities.App
 {
-    [Table("tbSpeciality")]
-    public class Speciality : DbEntity
+    [Table("tbPhones")]
+    public class Phone : DbEntity
     {
         [StringLength(64)]
-        public string Name { get; set; }
-        public virtual List<Group> Groups { get; set; }
-        public virtual List<TeachSubj> TeachSubj { get; set; }
+        public string PhoneNumber { get; set; }
+        //public int StudentId { get; set; }
+        public virtual Student Student { get; set; }
         public override string ToString()
         {
-            return Name;
+            return PhoneNumber;
         }
+
     }
-        
 }

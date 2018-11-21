@@ -47,12 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App\Classroom.cs" />
     <Compile Include="App\Department.cs" />
     <Compile Include="App\Group.cs" />
+    <Compile Include="App\GroupTimetable.cs" />
+    <Compile Include="App\Mark.cs" />
+    <Compile Include="App\PairTimetable.cs" />
+    <Compile Include="App\Phone.cs" />
     <Compile Include="App\Speciality.cs" />
     <Compile Include="App\Student.cs" />
     <Compile Include="App\Subject.cs" />
     <Compile Include="App\Teacher.cs" />
+    <Compile Include="App\TeachSubj.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

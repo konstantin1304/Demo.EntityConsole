@@ -3,12 +3,14 @@ using Demo.EntityConsole.Abstract;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Entities.App
 {
+    [Table("tbStudents")]
     public class Student : DbEntity
     {
         [StringLength(64)]
@@ -23,6 +25,8 @@ namespace Entities.App
         public string Adress { get; set; }
         public int GroupId { get; set; }
         public virtual Group Group { get; set; }
+        public virtual List<Phone> Phones { get;set;}
+        public virtual List<Mark> Marks { get; set; }
         public override string ToString()
         {
             return $"{FirstName} {MiddleName} {LastName}";
