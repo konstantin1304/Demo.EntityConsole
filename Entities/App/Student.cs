@@ -22,9 +22,8 @@ namespace Entities.App
         public DateTime Birstday { get; set; }
         public int LogbookNumber { get; set; }
         public string Email { get; set; }
-        public string Adress { get; set; }
-        public int GroupId { get; set; }
         public virtual Group Group { get; set; }
+        public virtual Address Address { get; set; }
         public virtual List<Phone> Phones { get;set;}
         public virtual List<Mark> Marks { get; set; }
         public override string ToString()

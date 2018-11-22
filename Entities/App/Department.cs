@@ -10,17 +10,16 @@ using System.Threading.Tasks;
 namespace Demo.Entities
 {
     [Table("tbDepartments")]
-    public class Department:DbEntity
+    public class Department : DbEntity
     {
         [StringLength(64)]
         public string Name { get; set; }
         public virtual List<Teacher> Teachers { get; set; }
-
         public override string ToString()
         {
             return Name;
         }
     }
 
-        
+
 }

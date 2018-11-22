@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App\Address.cs" />
     <Compile Include="App\Classroom.cs" />
     <Compile Include="App\Department.cs" />
     <Compile Include="App\Group.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="App\Subject.cs" />
     <Compile Include="App\Teacher.cs" />
     <Compile Include="App\TeachSubj.cs" />
+    <Compile Include="App\Timetable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

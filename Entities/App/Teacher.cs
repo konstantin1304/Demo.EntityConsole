@@ -1,4 +1,5 @@
 ﻿using Demo.EntityConsole.Abstract;
+using Entities.App;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -20,6 +21,8 @@ namespace Demo.Entities
         [StringLength(64)]
         public string LastName { get; set; }
         public virtual Department Department { get; set; }
+        public virtual List<TeachSubj> TeachSubjs { get; set; }
+
         public override string ToString()
         {
             return $"{FirstName} {MiddleName} {LastName}";

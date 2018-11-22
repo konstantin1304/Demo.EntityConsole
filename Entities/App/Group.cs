@@ -15,7 +15,9 @@ namespace Entities.App
         [StringLength(64)]
         public string Name { get; set; }
         public virtual Speciality Speciality { get; set; }
+        public virtual List<GroupTimetable> GroupTimetables { get; set; }
         public virtual List<Student> Students { get; set; }
+        public virtual List<Speciality> Specialities { get; set; }
         public override string ToString()
         {
             return Name;

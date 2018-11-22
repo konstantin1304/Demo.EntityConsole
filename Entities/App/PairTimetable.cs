@@ -1,6 +1,7 @@
 ﻿using Demo.EntityConsole.Abstract;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -9,12 +10,16 @@ using System.Threading.Tasks;
 namespace Entities.App
 {
     [Table("tbPairTimetable")]
-    class PairTimetable : DbEntity
+    public class PairTimetable : DbEntity
     {
         [Index(IsUnique = true)]
         public int PairNumber { get; set; }
-        public DateTime BeginPair { get; set; }
-        public DateTime EndPair { get; set; }
+        public bool? IsNumerator { get; set; }
+        [Range(1, 7)]
+        public int DayOfTheWeek { get; set; }
+        public virtual DateTime BeginPair { get; set; }
+        public virtual DateTime EndPair { get; set; }
+        public virtual List<Timetable> Timetables { get; set; }
         
     }
 }

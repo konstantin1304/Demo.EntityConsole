@@ -14,6 +14,7 @@ namespace Entities.App
     {
         [StringLength(64)]
         public string Name { get; set; }
+        public virtual List<TeachSubj> TeachSubjs { get; set; }
 
         public override string ToString()
         {

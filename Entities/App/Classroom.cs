@@ -15,7 +15,10 @@ namespace Entities.App
         public int ClassroomNumber{ get; set; }
         public int Capacity { get; set; }
         public int Floor { get; set; }
-
-        
+        public virtual List<Timetable> Timetables { get; set; }
+        public override string ToString()
+        {
+            return $"{ClassroomNumber} {Capacity} {Floor}";
+        }
     }
 }

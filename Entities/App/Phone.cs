@@ -14,7 +14,6 @@ namespace Entities.App
     {
         [StringLength(64)]
         public string PhoneNumber { get; set; }
-        //public int StudentId { get; set; }
         public virtual Student Student { get; set; }
         public override string ToString()
         {
