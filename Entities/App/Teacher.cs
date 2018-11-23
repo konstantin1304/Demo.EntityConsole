@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Demo.Entities
+namespace Entities.App
 {
     [Table("tbTeachers")]
     public class Teacher:DbEntity

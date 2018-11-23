@@ -10,8 +10,21 @@ namespace Demo.UnitOfWork
         static Unit()
         {
             _context = new MyAppDbContext("MyAppConnStr");
+            AddressesRepository = new AddressesRepository(_context);
+            ClassroomsRepository = new ClassroomsRepository(_context);
             DepartmentsRepository = new DepartmentsRepository(_context);
+            GroupsRepository = new GroupsRepository(_context);
+            GroupTimetablesRepository = new GroupTimetablesRepository(_context);
+            MarksRepository = new MarksRepository(_context);
+            PairTimetablesRepository = new PairTimetablesRepository(_context);
+            PhonesRepository = new PhonesRepository(_context);
+            SpecialitiesRepository = new SpecialitiesRepository(_context);
+            StudentsRepository = new StudentsRepository(_context);
+            SubjectsRepository = new SubjectsRepository(_context);
+            TeachSubjsRepository = new TeachSubjsRepository(_context);
             TeachersRepository = new TeachersRepository(_context);
+            TimetablesRepository = new TimetablesRepository(_context);
+
         }
         
         public static AddressesRepository AddressesRepository { get; }

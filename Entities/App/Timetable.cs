@@ -16,5 +16,10 @@ namespace Entities.App
         public virtual PairTimetable PairTimetable { get; set; }
         public virtual List<GroupTimetable> GroupTimetables { get; set; }
 
+        public override string ToString()
+        {
+            return "Классная комната :" + Classroom?.ToString() + "Преподаватель и предмет: " + TeachSubj.ToString() + "Пара: " + PairTimetable.ToString(); 
+        }
+
     }
 }

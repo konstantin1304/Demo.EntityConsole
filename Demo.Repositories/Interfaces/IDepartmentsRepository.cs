@@ -1,5 +1,5 @@
-﻿using Demo.Entities;
-using Demo.EntityConsole.Abstract;
+﻿using Demo.EntityConsole.Abstract;
+using Entities.App;
 
 namespace Demo.Repositoties
 {

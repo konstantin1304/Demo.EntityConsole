@@ -1,5 +1,4 @@
-﻿using Demo.Entities;
-using Demo.EntityConsole.Abstract;
+﻿using Demo.EntityConsole.Abstract;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

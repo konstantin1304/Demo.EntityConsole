@@ -1,6 +1,6 @@
-﻿using Demo.Entities;
-using Demo.EntityConsole.Common;
+﻿using Demo.EntityConsole.Common;
 using Demo.Repositoties;
+using Entities.App;
 using System.Data.Entity;
 
 namespace Demo.Repositories

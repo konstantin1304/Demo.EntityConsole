@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Demo.Entities
+namespace Entities.App
 {
     [Table("tbDepartments")]
     public class Department : DbEntity

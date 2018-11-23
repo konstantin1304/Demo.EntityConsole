@@ -18,7 +18,7 @@ namespace Entities.App
         public virtual List<Timetable> Timetables { get; set; }
         public override string ToString()
         {
-            return $"{ClassroomNumber} {Capacity} {Floor}";
+            return $" {ClassroomNumber} || ";
         }
     }
 }

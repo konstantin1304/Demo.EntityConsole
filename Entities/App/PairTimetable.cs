@@ -21,7 +21,22 @@ namespace Entities.App
         public virtual List<Timetable> Timetables { get; set; }
         public override string ToString()
         {
-            return $"{PairNumber} {IsNumerator} {DayOfTheWeek}";
+            return $" номер пары: {PairNumber} || {(IsNumerator.HasValue ? (IsNumerator.Value ? "Числитель" : "Знаменатель") : "")} День недели: {GetDayOfTheWeek(DayOfTheWeek)}";
+        }
+
+        private string GetDayOfTheWeek(int dayOfTheWeek)
+        {
+            switch (dayOfTheWeek)
+            {
+                case 1: return "Понедельник";
+                case 2: return "Вторник";
+                case 3: return "Среда";
+                case 4: return "Четверг";
+                case 5: return "Пятница";
+                case 6: return "Суббота";
+                case 7: return "Воскресенье";
+                default: return "";
+            }
         }
 
     }

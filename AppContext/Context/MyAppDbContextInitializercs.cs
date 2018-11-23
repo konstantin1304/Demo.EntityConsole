@@ -1,5 +1,4 @@
-﻿using Demo.Entities;
-using Entities.App;
+﻿using Entities.App;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -35,7 +34,7 @@ namespace Demo.AppContext
             context.TeachSubjs.Add(new TeachSubj
             {
                 Teacher = context.Teachers.FirstOrDefault(a => a.Id == 1),
-                Subject = context.Subjects.FirstOrDefault(b => b.Id == 1)
+                Subject = context.Subjects.FirstOrDefault(b => b.Id == 1),
             });
             context.TeachSubjs.Add(new TeachSubj
             {
@@ -59,7 +58,7 @@ namespace Demo.AppContext
             });
             context.SaveChanges();
 
-            context.Specialities.Add(new Speciality { Name = "Software Enginering" });
+            context.Specialities.Add(new Speciality { Name = "Software Developer" });
             context.Specialities.Add(new Speciality { Name = "TDD" });
             context.SaveChanges();
 

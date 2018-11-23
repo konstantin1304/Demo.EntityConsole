@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Entities.App
 {
-    [Table ("Address")]
+    [Table ("tbAddress")]
     public class Address :DbEntity
     {
         public int ZipCode { get; set; }

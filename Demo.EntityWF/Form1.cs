@@ -1,6 +1,6 @@
-﻿using Demo.Entities;
-using Demo.EntityConsole;
+﻿using Demo.EntityConsole;
 using Demo.UnitOfWork;
+using Entities.App;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,14 +23,16 @@ namespace Demo.EntityWF
         private void Form1_Load(object sender, EventArgs e)
         {
             comboBox1.DataSource =
-                Unit. DepartmentsRepository.AllItems.ToList();
+                Unit.GroupsRepository.AllItems.ToList();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Department item = (sender as ComboBox).SelectedItem as Department;
-            listBox1.DataSource =
-                Unit.TeachersRepository.AllItems.Where(x => x.Department.Id == item.Id).ToList();
+            Group item = (sender as ComboBox).SelectedItem as Group;
+            var groupTimeTables = Unit.GroupTimetablesRepository.AllItems.Where(x => x.Group.Id == item.Id).ToList();
+            //var timeTables = Unit.TimetablesRepository.AllItems.Where(x => x.Id == groupTimeTable.Group.Id).ToList();
+            listBox1.DataSource = groupTimeTables.Select(x => x.Timetable.ToString()).ToList();
+            
         }
     }
 }
