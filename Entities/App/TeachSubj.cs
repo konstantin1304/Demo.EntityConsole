@@ -12,11 +12,12 @@ namespace Entities.App
     [Table("tbTeachSubj")]
     public class TeachSubj : DbEntity
     {
+        
+        public virtual Subject Subject { get; set; }
+        public virtual Teacher Teacher { get; set; }
+        public virtual List<Mark> Marks { get; set; }
         public virtual List<Speciality> Specialities { get; set; }
         public virtual List<Timetable> Timetables { get; set; }
-        public virtual List<Subject> Subjects { get; set; }
-        public virtual List<Mark> Marks { get; set; }
-        public virtual List<Teacher> Teachers { get; set; }
-               
+
     }
 }

@@ -18,6 +18,7 @@ namespace Demo.AppContext
         public DbSet<PairTimetable> PairTimetables { get; set; }
         public DbSet<Phone> Phones { get; set; }
         public DbSet<Speciality> Specialities { get; set; }
+        public DbSet<Student> Students { get; set; }
         public DbSet<Subject> Subjects { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
         public DbSet<TeachSubj> TeachSubjs { get; set; }

@@ -4,9 +4,9 @@ using System.Data.Entity;
 
 namespace Demo.Repositories
 {
-    public class GroupsRepository : DbRepository<Group>, IGroupsRepository
+    public class MarksRepository : DbRepository<Mark>, IMarksRepository
     {
-        public GroupsRepository(DbContext context) : base(context)
+        public MarksRepository(DbContext context) : base(context)
         {
         }
     }

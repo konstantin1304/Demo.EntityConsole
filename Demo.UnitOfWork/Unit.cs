@@ -1,10 +1,5 @@
 ﻿using Demo.AppContext;
-using Demo.Repositoties;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Demo.Repositories;
 
 namespace Demo.UnitOfWork
 {
@@ -19,7 +14,23 @@ namespace Demo.UnitOfWork
             TeachersRepository = new TeachersRepository(_context);
         }
         
+        public static AddressesRepository AddressesRepository { get; }
+        public static ClassroomsRepository ClassroomsRepository { get; }
         public static DepartmentsRepository DepartmentsRepository { get; }
+        public static GroupsRepository GroupsRepository { get; }
+        public static GroupTimetablesRepository GroupTimetablesRepository { get; }
+        public static MarksRepository MarksRepository { get; }
+        public static PairTimetablesRepository PairTimetablesRepository { get; }
+        public static PhonesRepository PhonesRepository { get; }
+        public static SpecialitiesRepository SpecialitiesRepository { get; }
+        public static StudentsRepository StudentsRepository { get; }
+        public static SubjectsRepository SubjectsRepository { get; }
         public static TeachersRepository TeachersRepository { get; }
-    }
+        public static TeachSubjsRepository TeachSubjsRepository { get; }
+        public static TimetablesRepository TimetablesRepository { get; }
+
+
+
+
+}
 }

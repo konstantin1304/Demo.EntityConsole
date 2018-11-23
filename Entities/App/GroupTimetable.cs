@@ -13,5 +13,6 @@ namespace Entities.App
     {
         public virtual Timetable Timetable { get; set;}
         public virtual Group Group { get; set;}
+        
     }
 }

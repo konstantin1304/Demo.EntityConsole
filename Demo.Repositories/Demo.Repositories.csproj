@@ -47,19 +47,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IGroupTimetablesRepository.cs" />
+    <Compile Include="Interfaces\IAddressesRepository.cs" />
+    <Compile Include="Interfaces\IClassroomsRepository.cs" />
     <Compile Include="Interfaces\IGroupsRepository.cs" />
+    <Compile Include="Interfaces\IMarksRepository.cs" />
+    <Compile Include="Interfaces\IPairTimetablesRepository.cs" />
+    <Compile Include="Interfaces\IPhonesRepository.cs" />
     <Compile Include="Interfaces\ISpecialitiesRepository.cs" />
     <Compile Include="Interfaces\IStudentsRepository.cs" />
     <Compile Include="Interfaces\ISubjectsRepository.cs" />
+    <Compile Include="Interfaces\ITeachSubjsRepository.cs" />
+    <Compile Include="Interfaces\ITimetablesRepository.cs" />
+    <Compile Include="Repositories\AddressesRepository.cs" />
+    <Compile Include="Repositories\ClassroomsRepository.cs" />
     <Compile Include="Repositories\DepartmentsRepository.cs" />
     <Compile Include="Interfaces\IDepartmentsRepository.cs" />
     <Compile Include="Interfaces\ITeachersRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\GroupsRepository.cs" />
+    <Compile Include="Repositories\GroupTimetablesRepository.cs" />
+    <Compile Include="Repositories\MarksRepository.cs" />
+    <Compile Include="Repositories\PairTimetablesRepository.cs" />
+    <Compile Include="Repositories\PhonesRepository.cs" />
     <Compile Include="Repositories\SpecialitiesRepository.cs" />
     <Compile Include="Repositories\StudentsRepository.cs" />
     <Compile Include="Repositories\SubjectsRepository.cs" />
     <Compile Include="Repositories\TeachersRepository.cs" />
+    <Compile Include="Repositories\TeachSubjsRepository.cs" />
+    <Compile Include="Repositories\TimetablesRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

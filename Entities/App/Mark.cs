@@ -16,5 +16,9 @@ namespace Entities.App
         public int MarkStud { get; set; }
         public virtual Student Student { get; set; }
         public virtual TeachSubj TeachSubj { get; set; }
+        public override string ToString()
+        {
+            return $"{MarkStud}";
+        }
     }
 }

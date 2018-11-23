@@ -4,7 +4,7 @@ using Demo.EntityConsole.Abstract;
 
 namespace Demo.Repositoties
 {
-    public interface ITeachersRepository:IDbRepository<Teacher>
+    public interface ITeachersRepository : IDbRepository<Teacher>
     {
     }
 }

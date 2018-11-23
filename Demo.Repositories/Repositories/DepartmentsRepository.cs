@@ -1,8 +1,9 @@
 ﻿using Demo.Entities;
 using Demo.EntityConsole.Common;
+using Demo.Repositoties;
 using System.Data.Entity;
 
-namespace Demo.Repositoties
+namespace Demo.Repositories
 {
     public class DepartmentsRepository : DbRepository<Department>, IDepartmentsRepository
     {

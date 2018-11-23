@@ -12,7 +12,6 @@ namespace Entities.App
     [Table("tbPairTimetable")]
     public class PairTimetable : DbEntity
     {
-        [Index(IsUnique = true)]
         public int PairNumber { get; set; }
         public bool? IsNumerator { get; set; }
         [Range(1, 7)]
@@ -20,6 +19,10 @@ namespace Entities.App
         public virtual DateTime BeginPair { get; set; }
         public virtual DateTime EndPair { get; set; }
         public virtual List<Timetable> Timetables { get; set; }
-        
+        public override string ToString()
+        {
+            return $"{PairNumber} {IsNumerator} {DayOfTheWeek}";
+        }
+
     }
 }

@@ -28,7 +28,7 @@ namespace Entities.App
         public virtual List<Mark> Marks { get; set; }
         public override string ToString()
         {
-            return $"{FirstName} {MiddleName} {LastName}";
+            return $"{FirstName} {MiddleName} {LastName} {Birstday} {LogbookNumber} {Email}";
         }
 
     }

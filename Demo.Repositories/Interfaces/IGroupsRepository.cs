@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Demo.Repositories.Interfaces
+namespace Demo.Repositories
 {
-    interface IGroupsRepository : IDbRepository<Group>
+    public interface IGroupsRepository : IDbRepository<Group>
     {
     }
 }

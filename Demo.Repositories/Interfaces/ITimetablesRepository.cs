@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Demo.Repositories
 {
-    public interface ISpecialitiesRepository : IDbRepository<Speciality>
+    interface ITimetablesRepository : IDbRepository<Timetable>
     {
     }
 }

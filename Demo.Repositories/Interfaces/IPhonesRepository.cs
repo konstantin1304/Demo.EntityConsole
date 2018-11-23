@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Demo.Repositories
 {
-    public interface ISpecialitiesRepository : IDbRepository<Speciality>
+    public interface IPhonesRepository : IDbRepository<Phone>
     {
     }
 }
