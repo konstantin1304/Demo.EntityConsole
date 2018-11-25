@@ -21,12 +21,14 @@ namespace UniverUnitTest
 
         protected override Phone FindEqualModel(DbRepository<Phone> r, Phone model)
         {
-            //var b = model.Speciality == null;
-            return r.AllItems.FirstOrDefault(i =>
-              i.PhoneNumber == model.PhoneNumber &&
-              i.Student == model.Student
-             //&& (b || i.Speciality.Name == model.Speciality.Name)
-             );
+            var phone = r.AllItems.FirstOrDefault(i =>
+              i.PhoneNumber == model.PhoneNumber 
+              );
+            if (phone?.Student?.Id == model.Student?.Id)
+            {
+                return phone;
+            }
+            return null;
         }
         [TestInitialize]
         public override void InitParams()

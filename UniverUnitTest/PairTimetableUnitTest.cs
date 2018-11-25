@@ -21,15 +21,17 @@ namespace UniverUnitTest
 
         protected override PairTimetable FindEqualModel(DbRepository<PairTimetable> r, PairTimetable model)
         {
-            //var b = model.Speciality == null;
-            return r.AllItems.FirstOrDefault(i =>
-              i.BeginPair == model.BeginPair &&
-              i.EndPair == model.EndPair &&
+            var pairTimetable = r.AllItems.FirstOrDefault(i =>
               i.IsNumerator == model.IsNumerator &&
               i.PairNumber == model.PairNumber &&
               i.DayOfTheWeek == model.DayOfTheWeek
-             //&& (b || i.Speciality.Name == model.Speciality.Name)
              );
+            if (pairTimetable?.BeginPair == model?.BeginPair &&
+                pairTimetable?.EndPair == model?.EndPair)
+            {
+                return pairTimetable;
+            }
+            return null;
         }
         [TestInitialize]
         public override void InitParams()

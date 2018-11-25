@@ -21,22 +21,24 @@ namespace UniverUnitTest
 
         protected override Teacher FindEqualModel(DbRepository<Teacher> r, Teacher model)
         {
-            //var b = model.Speciality == null;
-            return r.AllItems.FirstOrDefault(i =>
+            var teacher = r.AllItems.FirstOrDefault(i =>
               i.FirstName == model.FirstName &&
               i.MiddleName == model.MiddleName &&
-              i.LastName == model.LastName
-
-             //&& (b || i.Speciality.Name == model.Speciality.Name)
+              i.LastName == model.LastName               
              );
+            if (teacher?.Department?.Id == model?.Department?.Id)
+            {
+                return teacher;
+            }
+            return null;
         }
         [TestInitialize]
         public override void InitParams()
         {
             dbSet = _context.Teachers;
             r = new TeachersRepository(_context);
-            model1 = new Teacher { FirstName = "Vasily", MiddleName = "Novak", LastName = "Sidorovich" };
-            model2 = new Teacher { FirstName = "Petro", MiddleName = "Limak", LastName = "Andreevich" };
+            model1 = new Teacher { FirstName = "Vasily", MiddleName = "Novak", LastName = "Sidorovich", Department = _context.Departments.FirstOrDefault() };
+            model2 = new Teacher { FirstName = "Petro", MiddleName = "Limak", LastName = "Andreevich", Department = _context.Departments.FirstOrDefault() };
         }
     }
 }

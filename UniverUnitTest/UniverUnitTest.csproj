@@ -65,9 +65,12 @@
     <Compile Include="PairTimetableUnitTest.cs" />
     <Compile Include="PhoneUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpecialityUnitTest.cs" />
     <Compile Include="StudentUnitTest.cs" />
     <Compile Include="SubjectUnitTest.cs" />
     <Compile Include="TeacherUnitTest.cs" />
+    <Compile Include="TeachSubjUnitTest.cs" />
+    <Compile Include="TimetableUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -16,8 +16,8 @@ namespace Entities.App
         public bool? IsNumerator { get; set; }
         [Range(1, 7)]
         public int DayOfTheWeek { get; set; }
-        public virtual DateTime BeginPair { get; set; }
-        public virtual DateTime EndPair { get; set; }
+        public DateTime BeginPair { get; set; }
+        public DateTime EndPair { get; set; }
         public virtual List<Timetable> Timetables { get; set; }
         public override string ToString()
         {

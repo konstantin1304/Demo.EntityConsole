@@ -69,10 +69,10 @@ namespace Demo.AppContext
             context.Addresses.Add(new Address { City = "Dnipro", Street = "Artema", ZipCode = 49000, House = "1a" });
             context.SaveChanges();
 
-            context.Students.Add(new Student { FirstName = "Vasya", MiddleName = "Kovtun", LastName = "Petrovich", LogbookNumber = 111, Email = "vasya123@gmail.com", Birstday = new DateTime(1995, 4, 5), Address = context.Addresses.FirstOrDefault(s => s.Id == 1), Group = context.Groups.FirstOrDefault(s => s.Id == 1) });
-            context.Students.Add(new Student { FirstName = "Petya", MiddleName = "Zovtunov", LastName = "Vedorovich", LogbookNumber = 112, Email = "petya123@gmail.com", Birstday = new DateTime(1996, 5, 6), Address = context.Addresses.FirstOrDefault(s => s.Id == 1), Group = context.Groups.FirstOrDefault(s => s.Id == 1) });
-            context.Students.Add(new Student { FirstName = "Senya", MiddleName = "Gavtun", LastName = "Andreevich", LogbookNumber = 121, Email = "senya123@gmail.com", Birstday = new DateTime(1997, 6, 7), Address = context.Addresses.FirstOrDefault(s => s.Id == 1), Group = context.Groups.FirstOrDefault(s => s.Id == 2) });
-            context.Students.Add(new Student { FirstName = "Fedya", MiddleName = "Minaev", LastName = "Nikolaevich", LogbookNumber = 122, Email = "fedya123@gmail.com", Birstday = new DateTime(1998, 7, 8), Address = context.Addresses.FirstOrDefault(s => s.Id == 1), Group = context.Groups.FirstOrDefault(s => s.Id == 2) });
+            context.Students.Add(new Student { FirstName = "Vasya", MiddleName = "Kovtun", LastName = "Petrovich", LogbookNumber = 111, Email = "vasya123@gmail.com", Birthday = new DateTime(1995, 4, 5), Address = context.Addresses.FirstOrDefault(s => s.Id == 1), Group = context.Groups.FirstOrDefault(s => s.Id == 1) });
+            context.Students.Add(new Student { FirstName = "Petya", MiddleName = "Zovtunov", LastName = "Vedorovich", LogbookNumber = 112, Email = "petya123@gmail.com", Birthday = new DateTime(1996, 5, 6), Address = context.Addresses.FirstOrDefault(s => s.Id == 1), Group = context.Groups.FirstOrDefault(s => s.Id == 1) });
+            context.Students.Add(new Student { FirstName = "Senya", MiddleName = "Gavtun", LastName = "Andreevich", LogbookNumber = 121, Email = "senya123@gmail.com", Birthday = new DateTime(1997, 6, 7), Address = context.Addresses.FirstOrDefault(s => s.Id == 1), Group = context.Groups.FirstOrDefault(s => s.Id == 2) });
+            context.Students.Add(new Student { FirstName = "Fedya", MiddleName = "Minaev", LastName = "Nikolaevich", LogbookNumber = 122, Email = "fedya123@gmail.com", Birthday = new DateTime(1998, 7, 8), Address = context.Addresses.FirstOrDefault(s => s.Id == 1), Group = context.Groups.FirstOrDefault(s => s.Id == 2) });
             context.SaveChanges();
 
             context.Phones.Add(new Phone { PhoneNumber = "0933530494", Student = context.Students.FirstOrDefault(s => s.Id == 1) });

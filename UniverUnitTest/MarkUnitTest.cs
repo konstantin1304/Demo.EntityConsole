@@ -15,27 +15,28 @@ namespace UniverUnitTest
     {
         protected override void ChangeModel(Mark model)
         {
-            model.MarkStud = 10;
+            model.MarkStud = 3;
             _context.SaveChanges();
         }
 
         protected override Mark FindEqualModel(DbRepository<Mark> r, Mark model)
         {
-            //var b = model.Speciality == null;
-            return r.AllItems.FirstOrDefault(i =>
-              i.MarkStud == model.MarkStud &&
-              i.Student == model.Student &&
-              i.TeachSubj == model.TeachSubj
-             //&& (b || i.Speciality.Name == model.Speciality.Name)
+            var mark = r.AllItems.FirstOrDefault(i =>
+              i.MarkStud == model.MarkStud
              );
+            if ((mark?.TeachSubj?.Id == model.TeachSubj?.Id) && (mark?.Student?.Id == model.Student?.Id))
+            {
+                return mark;
+            }
+           return null;
         }
         [TestInitialize]
         public override void InitParams()
         {
             dbSet = _context.Marks;
             r = new MarksRepository(_context);
-            model1 = new Mark { MarkStud = 8, Student = _context.Students.FirstOrDefault(), TeachSubj = _context.TeachSubjs.FirstOrDefault() };
-            model2 = new Mark { MarkStud = 9, Student = _context.Students.FirstOrDefault(), TeachSubj = _context.TeachSubjs.FirstOrDefault() };
+            model1 = new Mark { MarkStud = 1, Student = _context.Students.FirstOrDefault(), TeachSubj = _context.TeachSubjs.FirstOrDefault() };
+            model2 = new Mark { MarkStud = 2, Student = _context.Students.FirstOrDefault(), TeachSubj = _context.TeachSubjs.FirstOrDefault() };
         }
     }
 }

@@ -18,7 +18,7 @@ namespace Entities.App
         public string MiddleName { get; set; }
         [StringLength(64)]
         public string LastName { get; set; }
-        public DateTime Birstday { get; set; }
+        public DateTime Birthday { get; set; }
         public int LogbookNumber { get; set; }
         public string Email { get; set; }
         public virtual Group Group { get; set; }
@@ -27,7 +27,7 @@ namespace Entities.App
         public virtual List<Mark> Marks { get; set; }
         public override string ToString()
         {
-            return $"{FirstName} {MiddleName} {LastName} {Birstday} {LogbookNumber} {Email}";
+            return $"{FirstName} {MiddleName} {LastName} {Birthday} {LogbookNumber} {Email}";
         }
 
     }

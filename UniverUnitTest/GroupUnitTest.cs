@@ -21,10 +21,14 @@ namespace UniverUnitTest
 
         protected override Group FindEqualModel(DbRepository<Group> r, Group model)
         {
-            return r.AllItems.FirstOrDefault(i =>
+            var group = r.AllItems.FirstOrDefault(i =>
               i.Name == model.Name 
-              && (i.Speciality == model.Speciality)
              );
+            if (group?.Speciality?.Id == model.Speciality?.Id)
+            {
+                return group;
+            }
+            return null;
         }
         [TestInitialize]
         public override void InitParams()

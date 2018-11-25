@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace UniverUnitTest
 {
     [TestClass]
-    class DepartmentUnitTest : AbstractTestClass<Department>
+    public class DepartmentUnitTest : AbstractTestClass<Department>
     {
         protected override void ChangeModel(Department model)
         {

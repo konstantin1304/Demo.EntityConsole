@@ -31,6 +31,7 @@ namespace UniverUnitTest
         public void TestMethod()
         {
             var models = r.AddItem(model1);
+            _context.SaveChanges();
             var dbItem = FindEqualModel(r, model1);
 
             Assert.IsNotNull(dbItem);

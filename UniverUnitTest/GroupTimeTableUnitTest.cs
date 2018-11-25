@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace UniverUnitTest
 {
     [TestClass]
-    public class GroupTimeTableUnitTest:AbstractTestClass<GroupTimetable>
+    public class GroupTimetableUnitTest:AbstractTestClass<GroupTimetable>
     {
         protected override void ChangeModel(GroupTimetable model)
         {
@@ -21,12 +21,18 @@ namespace UniverUnitTest
 
         protected override GroupTimetable FindEqualModel(DbRepository<GroupTimetable> r, GroupTimetable model)
         {
-            //var b = model.Speciality == null;
-            return r.AllItems.FirstOrDefault(i =>
-              i.Group == model.Group &&
-              i.Timetable==model.Timetable
-             //&& (b || i.Speciality.Name == model.Speciality.Name)
+            if (model.Id == 0)
+            {
+                return r.AllItems.ToList().FirstOrDefault(i =>
+              i.Group.Id == model.Group.Id &&
+              i.Timetable.Id == model.Timetable.Id
              );
+            }
+            else
+            {
+                return _context.GroupTimetables.Find(model.Id);
+            }
+            
         }
         [TestInitialize]
         public override void InitParams()
